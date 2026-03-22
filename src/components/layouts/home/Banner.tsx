@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import GridDistortion from "./../../GridDistortion";
+// import GridDistortion from "./../../GridDistortion";
 import Container from "@/components/common/Container";
 import Image from "next/image";
 import Link from "next/link";

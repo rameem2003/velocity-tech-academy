@@ -33,7 +33,10 @@ const About = () => {
           <div className="w-full lg:w-1/2">
             <div className="w-full px-2 py-10 xl:p-20">
               {titles.map((item, index) => (
-                <Card className="bg-accent-foreground mb-5 rounded-md px-4">
+                <Card
+                  key={index}
+                  className="bg-accent-foreground mb-5 rounded-md px-4"
+                >
                   <h3 className="font-syncopate text-lg font-bold text-white uppercase">
                     {item.title}
                   </h3>
