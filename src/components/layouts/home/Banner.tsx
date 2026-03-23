@@ -59,7 +59,7 @@ const Banner = () => {
           <div className="flex min-h-dvh flex-col items-center justify-center">
             <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
               <div className="w-full md:w-1/2 lg:w-7/12">
-                <h1 className="font-inter w-full text-center text-xl font-bold text-white uppercase lg:w-175 lg:text-left xl:text-[64px]">
+                <h1 className="font-inter w-full text-center text-4xl font-bold text-white uppercase lg:w-175 lg:text-left xl:text-[64px]">
                   up your <span className="text-accent-foreground">skills</span>{" "}
                   to <span className="text-accent-foreground">advance</span>{" "}
                   your <span className="text-accent-foreground">career</span>{" "}
@@ -68,7 +68,7 @@ const Banner = () => {
 
                 <div className="mt-8 flex flex-col items-center justify-start gap-5 lg:flex-row">
                   <Link href="/courses">
-                    <Button className="font-syncopate cursor-pointer p-7 text-base">
+                    <Button className="font-syncopate cursor-pointer p-7 text-xs lg:text-base">
                       Browse Courses
                     </Button>
                   </Link>

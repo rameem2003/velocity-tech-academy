@@ -1,3 +1,5 @@
+import Contact from "@/components/common/Contact";
+import Footer from "@/components/common/Footer";
 import React from "react";
 
 const layout = ({
@@ -5,7 +7,13 @@ const layout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <Contact />
+      <Footer />
+    </>
+  );
 };
 
 export default layout;
