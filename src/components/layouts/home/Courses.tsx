@@ -1,8 +1,12 @@
 import Container from "@/components/common/Container";
 import CourseCard from "@/components/common/CourseCard";
+import { allCourses } from "@/lib/courseApi";
+import { courseType } from "@/types/type";
 import React from "react";
 
-const Courses = () => {
+const Courses = async () => {
+  let { data } = await allCourses(3);
+  let courses: courseType[] = data;
   return (
     <section className="py-20">
       <Container>
@@ -15,8 +19,8 @@ const Courses = () => {
         </p>
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-2">
-          {Array.from({ length: 3 }).map((course, i) => (
-            <CourseCard key={i} />
+          {courses.map((course, i) => (
+            <CourseCard key={i} data={course} />
           ))}
         </div>
       </Container>

@@ -53,13 +53,10 @@ const Banner = () => {
 
       <div className="absolute top-0 left-0 z-10 min-h-dvh w-full">
         <Container>
-          {/* <div className=" flex flex-col">
-
-          </div> */}
-          <div className="flex min-h-dvh flex-col items-center justify-center">
+          <div className="flex min-h-dvh flex-col items-center justify-center pt-24">
             <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
               <div className="w-full md:w-1/2 lg:w-7/12">
-                <h1 className="font-inter w-full text-center text-4xl font-bold text-white uppercase lg:w-175 lg:text-left xl:text-[64px]">
+                <h1 className="font-inter w-full text-center text-4xl font-bold text-white uppercase lg:text-left lg:text-5xl xl:w-175 xl:text-[64px]">
                   up your <span className="text-accent-foreground">skills</span>{" "}
                   to <span className="text-accent-foreground">advance</span>{" "}
                   your <span className="text-accent-foreground">career</span>{" "}
@@ -67,8 +64,8 @@ const Banner = () => {
                 </h1>
 
                 <div className="mt-8 flex flex-col items-center justify-start gap-5 lg:flex-row">
-                  <Link href="/courses">
-                    <Button className="font-syncopate cursor-pointer p-7 text-xs lg:text-base">
+                  <Link href="/our-courses">
+                    <Button className="font-syncopate cursor-pointer p-7 text-xs xl:text-base">
                       Browse Courses
                     </Button>
                   </Link>
@@ -101,7 +98,7 @@ const Banner = () => {
                   alt="logo"
                   width={1000}
                   height={1000}
-                  className="w-full object-contain"
+                  className="mx-auto w-3/4 object-contain lg:w-full"
                 />
               </div>
             </div>
@@ -114,7 +111,7 @@ const Banner = () => {
                     alt={item.title}
                     width={200}
                     height={200}
-                    className="h-[40px] w-[40px] object-contain grayscale duration-300 hover:grayscale-0 xl:h-[80px] xl:w-[80px]"
+                    className="h-[40px] w-[40px] object-contain grayscale duration-300 hover:grayscale-0 xl:h-20 xl:w-20"
                   />
                 ))}
               </div>

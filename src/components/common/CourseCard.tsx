@@ -5,17 +5,18 @@ import { RiUser3Fill } from "@remixicon/react";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
+import { courseType } from "@/types/type";
 
-const CourseCard = () => {
+const CourseCard = ({ data }: { data: courseType }) => {
   return (
-    <Card className="border-accent-foreground mx-auto mb-2 gap-0 rounded-[15px] border-2 bg-transparent p-0 duration-300 ease-in-out hover:translate-y-[-5px] hover:shadow-lg">
+    <Card className="border-accent-foreground mx-auto mb-2 gap-0 rounded-[15px] border-2 bg-transparent p-0 duration-300 ease-in-out hover:-translate-y-1.25 hover:shadow-lg">
       <CardContent className="m-0 p-0">
         <Image
-          src={"/course.jpg"}
+          src={process.env.NEXT_PUBLIC_BASE_URL + data.thumb}
           alt="banner"
           width={500}
           height={500}
-          className="h-[200px] w-full rounded-t-[15px] lg:h-[250px]"
+          className="h-50 w-full rounded-t-[15px] lg:h-62.5"
         />
       </CardContent>
       <CardFooter className="m-0 block rounded-b-[15px] bg-[#00000e] px-4 py-5">
@@ -24,25 +25,26 @@ const CourseCard = () => {
 
           <p className="font-inter mt-2 flex items-center gap-1 text-[14px] font-medium text-white">
             <RiUser3Fill />
-            200
+            {data.users.length || 0} +
           </p>
         </div>
 
-        <p className="font-inter mt-2 text-[14px] font-medium text-white">
-          Web Development
+        <p className="font-inter text-accent-foreground mt-2 text-[14px] font-medium">
+          {data.category.name}
         </p>
 
         <h2 className="font-inter text-[24px] font-bold text-white">
-          MERN Stack Development Course
+          {data.title}
         </h2>
 
         <div className="mt-3 flex items-center justify-between">
           <p className="font-inter text-accent-foreground text-[24px] font-bold">
-            50000 BDT
+            {data.discountedPrice ? data.discountedPrice : data.sellingPrice}{" "}
+            BDT
           </p>
 
           <Link
-            href={`/course/123`}
+            href={`/course/${data._id}`}
             className="font-inter bg-cd-primary rounded-[15px] text-[20px] font-semibold text-white"
           >
             <Button className="cursor-pointer">Details</Button>

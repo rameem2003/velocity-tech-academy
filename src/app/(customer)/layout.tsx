@@ -1,5 +1,6 @@
 import Contact from "@/components/common/Contact";
 import Footer from "@/components/common/Footer";
+import Navigation from "@/components/common/Navigation";
 import React from "react";
 
 const layout = ({
@@ -9,6 +10,7 @@ const layout = ({
 }>) => {
   return (
     <>
+      <Navigation />
       {children}
       <Contact />
       <Footer />
