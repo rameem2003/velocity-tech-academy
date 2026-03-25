@@ -232,10 +232,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         // }
       }
     } catch (error) {
-      if (pathName == "/dashboard" || pathName?.startsWith("/dashboard/")) {
-        toast.error("Please login to access the dashboard");
-        router.push("/login");
-      }
+      // if (pathName == "/dashboard" || pathName?.startsWith("/dashboard/")) {
+      //   toast.error("Please login to access the dashboard");
+      //   router.push("/login");
+      // }
       setLoading(false);
       console.log(error);
     }
