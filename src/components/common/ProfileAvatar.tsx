@@ -39,9 +39,9 @@ const ProfileAvatar = () => {
           <DropdownMenuContent className="bg-accent w-40" align="start">
             <DropdownMenuGroup>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <Link href="/profile" className="cursor-pointer">
+              <Link href="/dashboard" className="cursor-pointer">
                 <DropdownMenuItem className="cursor-pointer">
-                  Profile
+                  Dashboard
                   <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                 </DropdownMenuItem>
               </Link>

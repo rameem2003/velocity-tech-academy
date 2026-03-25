@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { AuthProvider } from "@/hooks/useAuth";
 import { Toaster } from "sonner";
 import { CartProvider } from "@/hooks/useCart";
+import { CourseProvider } from "@/hooks/useCourse";
 
 const synocorpate = Syncopate({
   subsets: ["latin"],
@@ -85,14 +86,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${synocorpate.variable} ${inter.variable} ${roboto.variable} antialiased`}
+      className={`${synocorpate.variable} ${inter.variable} ${roboto.variable} font-inter antialiased`}
     >
       <AuthProvider>
         <CartProvider>
-          <body className="font-inter flex min-h-full flex-col">
-            {children}
-            <Toaster richColors position="bottom-right" />
-          </body>
+          <CourseProvider>
+            <body className="font-inter flex min-h-full flex-col">
+              {children}
+              <Toaster richColors position="bottom-right" />
+            </body>
+          </CourseProvider>
         </CartProvider>
       </AuthProvider>
     </html>

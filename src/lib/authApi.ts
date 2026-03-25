@@ -1,18 +1,15 @@
 // "use client";
 export const loginRequest = async (email: string, password: string) => {
   try {
-    let res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/auth/login/admin`,
-      {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify({ email, password }),
+    let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+
+      body: JSON.stringify({ email, password }),
+    });
     return res.json();
   } catch (error: any) {
     throw new Error("Failed to login: " + error.message);
